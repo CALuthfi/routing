@@ -22,7 +22,7 @@ class App extends Component {
               render={props => <Products sortBy="newst" {...props} />}
               component={Products}
             />
-            <Route path="/posts/:year/:month" component={Posts} />
+            <Route path="/posts/:year?/:month?" component={Posts} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/" exact component={Home} />
           </Switch>
