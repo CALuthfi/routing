@@ -16,7 +16,11 @@ class App extends Component {
         <NavBar />
         <div path="contennt">
           <Switch>
-            <Route path="/products" component={Products} />
+            <Route
+              path="/products"
+              render={props => <Products sortBy="newst" {...props} />}
+              component={Products}
+            />
             <Route path="/posts" component={Posts} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/" exact component={Home} />
